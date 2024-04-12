@@ -64,7 +64,7 @@ height: 500px;
 border-radius: 50px;
 position: relative;
 }
-.modal-main .modal-logo{
+/* .modal-main .modal-logo{
   position: absolute;
   top:-50px;
   left: 50%;
@@ -75,7 +75,7 @@ transform: translateX(-50%);
   width: 130px;
   height: 130px;
   background: url("../images/chat-btn.png") no-repeat center #dbf4c7;
-}
+} */
 .modal-nonotic{
   font-size: 20px;
   font-weight: 500;
