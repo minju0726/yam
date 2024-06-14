@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url("font/font.css");
+@import url('font/font.css');
 
 * {
   margin: 0;
@@ -17,85 +17,17 @@ img {
 html {
   font-size: 16px;
 }
-html.active {
-  overflow: hidden;
-}
 body {
-  font-family: "Pretendard", sans-serif;
+  font-family: 'Pretendard', sans-serif;
   font-size: 16px;
   line-height: 1;
   letter-spacing: 0;
   font-weight: 400;
   color: #222;
   word-break: keep-all;
+  overflow-y: scroll;
 }
-/* 모달 떳을때 뒤에 스크롤이 되지 않도록 */
-body{
-  overflow-y: hidden;
-}
-body.active {
-  overflow-y: auto;
-}
-/* 안내창 */
-body.active{
-  overflow-y: hidden;
-}
-.modal-wrap{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 99999;
-  display: flex;
-  justify-content: center;
-  align-items: center
-}
-.modal-main{
-display: flex;
-flex-direction: column;
-justify-content: center;
-text-align: center;
-line-height: 50px;
-background-color: #fff;
-width: 600px;
-height: 500px;
-border-radius: 50px;
-position: relative;
-}
-/* .modal-main .modal-logo{
-  position: absolute;
-  top:-50px;
-  left: 50%;
-transform: translateX(-50%);
- border-radius: 50%;
- border: 6px solid #fff;
-  display: block;
-  width: 130px;
-  height: 130px;
-  background: url("../images/chat-btn.png") no-repeat center #dbf4c7;
-} */
-.modal-nonotic{
-  font-size: 20px;
-  font-weight: 500;
-}
-.modal-nonotic strong{
-  color: red;
-  background: linear-gradient(to top , yellow 50% , transparent 50%);
-}
-.modal-nonotic span{
-  font-size: 16px;
-  font-weight: 300;
-}
-.modal-close{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #d8d8d8;
-border-radius: 0 0 50px 50px;
-}
+
 /* 공통 클래스 */
 .inner {
   display: block;
@@ -111,7 +43,7 @@ border-radius: 0 0 50px 50px;
   width: 60px;
   height: 60px;
   border-radius: 5px;
-  background-color: #3056a1;
+  background-color: #db574f;
   border: 0;
   color: #fff;
   font-size: 20px;
@@ -122,12 +54,12 @@ border-radius: 0 0 50px 50px;
   transition: all 0.3s;
 }
 /* js기능추가  */
-.gotop.active{
+.gotop.active {
   bottom: 20px;
   visibility: visible;
   opacity: 1;
 }
-.gotop.active-footer{
+.gotop.active-footer {
   bottom: 320px;
 }
 /* 전체 레이아웃 */
@@ -142,11 +74,11 @@ border-radius: 0 0 50px 50px;
   top: 0;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
   width: 100%;
-  height: 100px;
+  height: 120px;
   background-color: rgba(255, 255, 255, 0);
   padding: 0 60px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -154,11 +86,11 @@ border-radius: 0 0 50px 50px;
   transition: all 0.5s;
 }
 .header.active {
-  height: 80px;
+  height: 120px;
   background-color: rgba(255, 255, 255, 1);
 }
 .header.active .logo {
-  background: url("../images/logo.png") no-repeat center;
+  background: url('../images/logo.png') no-repeat center;
   background-size: cover;
 }
 .header.active .gnb a {
@@ -170,9 +102,9 @@ border-radius: 0 0 50px 50px;
 }
 .logo {
   position: relative;
-  width: 125px;
-  height: 30px;
-  background: url("../images/logo_white.png") no-repeat center;
+  width: 200px;
+  height: 110px;
+  background: url('../images/logo.png') no-repeat center;
   background-size: cover;
   transition: all 0.5s;
 }
@@ -185,7 +117,7 @@ border-radius: 0 0 50px 50px;
 .gnb li a {
   display: block;
   line-height: 100px;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 500;
   color: #fff;
   padding: 0 34px;
@@ -195,7 +127,7 @@ border-radius: 0 0 50px 50px;
   position: relative;
 }
 .gnb li a span::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -298,19 +230,19 @@ border-radius: 0 0 50px 50px;
   height: 100%;
 }
 .visual-bg-1 {
-  background: url("../images/main_visual_1.jpg") no-repeat center;
+  background: url('../images/main_visual_1.jpg') no-repeat center;
   background-size: cover;
 }
 .visual-bg-2 {
-  background: url("../images/main_visual_2.jpg") no-repeat center;
+  background: url('../images/main_visual_2.jpg') no-repeat center;
   background-size: cover;
 }
 .visual-bg-3 {
-  background: url("../images/main_visual_3.jpg") no-repeat center;
+  background: url('../images/main_visual_3.jpg') no-repeat center;
   background-size: cover;
 }
 .visual-bg-4 {
-  background: url("../images/main_visual_4.jpg") no-repeat center;
+  background: url('../images/main_visual_4.jpg') no-repeat center;
   background-size: cover;
 }
 .visual-box {
@@ -339,6 +271,7 @@ border-radius: 0 0 50px 50px;
   height: 65px;
   /* opacity: 1; */
   padding: 0 45px 0 50px;
+  border-radius: 50px;
   /* background-color: aquamarine; */
   margin-top: 50px;
   font-size: 17px;
@@ -380,6 +313,7 @@ border-radius: 0 0 50px 50px;
 
 /* 서비스 */
 .service {
+  margin-top: -300px;
   position: relative;
   display: block;
   height: 100vh;
@@ -390,130 +324,18 @@ border-radius: 0 0 50px 50px;
   height: 100%;
 }
 .service-title {
-  font-family: "Godo", "notokr";
+  font-family: 'Godo', 'notokr';
   margin-bottom: 30px;
   font-size: 38px;
   text-align: center;
 }
 .service-title span {
-  color: #3a68b2;
+  color: brown;
 }
-.service-wrap {
-  width: calc(100% - 20px * 2);
+.ser {
   margin: 0 auto;
-  max-width: 1420px;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: minmax(100px, auto);
-  gap: 20px;
-}
-.service-box-1 {
-  display: block;
-  position: relative;
-  /* 700 / 1420 * 100 = 49.2957vw */
-  height: 49.2957vw;
-  max-height: 680px;
-  overflow: hidden;
-  grid-row: 1/3;
-}
-/* hover 했을때 */
-.service-box-1:hover .service-bg,
-.service-box-2:hover .service-bg,
-.service-box-3:hover .service-bg {
-  transform: rotate(2deg) scale(1.1);
-  opacity: 0.9;
-}
-
-.service-bg {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.service-bg-1 {
-  display: block;
   width: 100%;
-  height: 100%;
-  background: url("../images/main_service_img1.jpg") no-repeat center;
-  background-size: cover;
-  transition: all 0.5s;
-}
-.service-box-2 {
-  position: relative;
-  overflow: hidden;
-}
-
-.service-bg-2 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: url("../images/main_service_img2.jpg") no-repeat center;
-  background-size: cover;
-  transition: all 0.5s;
-}
-.service-box-3 {
-  position: relative;
-  overflow: hidden;
-}
-
-.service-bg-3 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: url("../images/main_service_img3.jpg") no-repeat center;
-  background-size: cover;
-  transition: all 0.5s;
-}
-
-.service-wrap a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  z-index: 9;
-
-  display: grid;
-  padding: 30px;
-}
-.service-box-wrap {
-  justify-self: start;
-  align-self: end;
-  color: #fff;
-}
-/* 서비스 텍스영역 */
-.service-box-title {
-  position: relative;
-  font-size: 26px;
-  margin-bottom: 3px;
-}
-.service-box-desc {
-  font-size: 17px;
-  font-weight: 300;
-  opacity: 0.8;
-}
-.no-br {
-  display: none;
-}
-.service-box-bt {
-  display: block;
-  position: relative;
-  width: 100%;
-  max-width: 140px;
-  height: 40px;
-  padding: 0 15px 0 20px;
-  margin-top: 20px;
-  font-size: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: #fff;
-  background: none;
-  text-align: left;
-  cursor: pointer;
-}
-.service-box-bt i {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translatey(-50%);
-  line-height: 2;
+  height: 700px;
 }
 /* 소개 */
 .about {
@@ -537,7 +359,7 @@ border-radius: 0 0 50px 50px;
   font-weight: bold;
 }
 .about-title span {
-  color: #3a68b2;
+  color: brown;
 }
 .about-right p {
   font-size: 16px;
@@ -547,13 +369,13 @@ border-radius: 0 0 50px 50px;
 }
 .about-right .about-txt-main {
   margin-bottom: 45px;
-  font-size: 28px;
+  font-size: 2rem;
   font-weight: 500;
   line-height: 1.35;
-  margin-bottom: 45px;
+
 }
 .about-txt-main span {
-  color: #3a68b2;
+  color: brown;
   font-weight: 700;
 }
 .about-link {
@@ -581,6 +403,7 @@ border-radius: 0 0 50px 50px;
 }
 /* 비지니스 */
 .business {
+  margin-top: 200px;
   display: block;
   position: relative;
 }
@@ -647,11 +470,28 @@ border-radius: 0 0 50px 50px;
 .sw-business a:hover.business-bg-3 {
   background-color: #f0b23a;
 }
-.business a img {
+.business-bg-1 img{
+  width: 50%;
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 46%;
+  width: 40%;
+  max-width: 317px;
+}
+.business-bg-2 img{
+  width: 60%;
+  position: absolute;
+  top: 40%;
+  right: 5%;
+  bottom: 0;
+}
+.business-bg-3 img{
+  width: 50%;
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  bottom: 0;
+  width: 30%;
   max-width: 317px;
 }
 /* business모달 */
@@ -709,7 +549,7 @@ border-radius: 0 0 50px 50px;
   padding: 0 18px;
 }
 .footer-bar::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -719,4 +559,28 @@ border-radius: 0 0 50px 50px;
 }
 .footer-br {
   display: none;
+}
+
+/* 지도 */
+.map-frame {
+  text-align: center;
+  margin: 0px 0;
+}
+.map-content {
+  width: 600px;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+  /* filter:invert(1); */
+}
+
+
+/* 스와이퍼 버튼 */
+.swiper-button-next{
+  color: #fff;
+  ;
+}
+.swiper-button-prev{
+  color: #fff;
 }
